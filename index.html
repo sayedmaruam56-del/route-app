@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>.M | My Learning Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home">
+        <span class="brand-mark">.M</span>
+        <span><b>.M</b><small>MY LEARNING JOURNEY</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-link active" href="#home"><span>⌂</span> Home</a>
+        <a class="nav-link" href="#roadmap"><span>◇</span> Roadmap</a>
+        <a class="nav-link" href="#roadmap"><span>▱</span> Sessions</a>
+        <a class="nav-link" href="#progress"><span>▥</span> Progress</a>
+        <a class="nav-link" href="#notes"><span>▤</span> My Notes</a>
+        <a class="nav-link" href="#resources"><span>↗</span> Sources</a>
+      </nav>
+      <div class="sidebar-note">
+        <div class="leaf-art">✦</div>
+        <p>One concept<br>at a time.<br>One step closer.</p>
+        <span class="heart">♥</span>
+      </div>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">FRONT-END DEVELOPMENT</p>
+          <h1>My <span>React</span> Roadmap</h1>
+          <p class="hero-subtitle">خطوة بخطوة، هنحوّل التراكم لفهم حقيقي ومشاريع أقدر أنفذها بنفسي.</p>
+          <div class="stats-row">
+            <div class="stat-card"><span class="stat-icon">▣</span><div><strong>09</strong><small>Sessions</small></div></div>
+            <div class="stat-card"><span class="stat-icon">◷</span><div><strong>6</strong><small>Hours / Day</small></div></div>
+            <div class="stat-card"><span class="stat-icon">▥</span><div><strong id="heroProgress">0%</strong><small>Progress</small></div></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="glow glow-one"></div><div class="glow glow-two"></div>
+          <div class="plant">♧</div>
+          <div class="laptop"><div class="laptop-screen"><span class="react-symbol">⚛</span><span class="screen-caption">LEARN • BUILD • GROW</span></div><div class="laptop-base"></div></div>
+          <div class="book-stack"><span>Learn</span><span>Build</span><span>Grow</span></div>
+          <div class="sticky-note">♡<br><small>A better version<br>of me is coming...</small></div>
+          <div class="mini-note">☑ Understand<br>☑ Practice<br>☑ Test<br>☑ Review</div>
+        </div>
+      </header>
+
+      <section class="study-system panel">
+        <div class="system-heading"><span class="eyebrow">MY STUDY SYSTEM</span><h2>هاذاكر إزاي؟</h2></div>
+        <div class="system-step"><span class="step-icon">♧</span><div><b>Understand</b><small>أفهم الفكرة وليه بنستخدمها.</small></div></div>
+        <span class="step-arrow">←</span>
+        <div class="system-step"><span class="step-icon">⌘</span><div><b>Practice</b><small>أكتب الكود وأجربه بنفسي.</small></div></div>
+        <span class="step-arrow">←</span>
+        <div class="system-step"><span class="step-icon">♧</span><div><b>Test</b><small>أحل تمرين من غير نسخ الحل.</small></div></div>
+        <span class="step-arrow">←</span>
+        <div class="system-step"><span class="step-icon">✓</span><div><b>Review</b><small>أراجع وأثبت المعلومة قبل ما أكمل.</small></div></div>
+      </section>
+
+      <section class="progress-panel panel" id="progress">
+        <div class="progress-main">
+          <div class="progress-labels"><b>OVERALL PROGRESS</b><span>تقدمي في الخطة</span></div>
+          <div class="progress-track"><div class="progress-fill" id="overallFill"></div></div>
+          <div class="progress-foot"><strong id="overallPercent">0%</strong><span id="taskCount">0 من 48 مهمة مكتملة</span></div>
+        </div>
+        <div class="goal-box"><b>◎ هدفي</b><p>إنهاء 9 Sessions وتطبيق مشروع Social App بنفسي.</p></div>
+      </section>
+
+      <section class="roadmap-section" id="roadmap">
+        <div class="section-heading">
+          <div><span class="heading-icon">◇</span><h2>THE ROADMAP <small>خطة المذاكرة</small></h2></div>
+          <p>علّمي على المهمة بعد ما تفهميها وتطبقيها.</p>
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="foundation">Foundation</button>
+          <button class="filter" data-filter="navigation">Navigation</button>
+          <button class="filter" data-filter="api">API</button>
+          <button class="filter" data-filter="project">Project</button>
+          <button class="filter" data-filter="forms">Forms</button>
+          <button class="filter" data-filter="auth">Authentication</button>
+          <button class="filter" data-filter="advanced">Advanced</button>
+        </div>
+        <div class="session-grid" id="sessionGrid"></div>
+      </section>
+
+      <section class="bottom-grid">
+        <div class="panel notes-panel" id="notes">
+          <div class="panel-title"><span>✎</span><h3>My Notes</h3></div>
+          <textarea id="notesInput" placeholder="Write down the most important thing you understood or a question you need to revisit..."></textarea>
+          <button class="secondary-btn" id="saveNotes">Save Notes</button>
+          <small id="notesStatus" class="muted"></small>
+        </div>
+
+        
+<div class="panel rules-panel quotes-panel" id="resources">
+  <div class="quotes-heading">
+    <span class="quotes-star">✧</span>
+    <h3>Lines That Stay</h3>
+    <div class="heading-line"><span>✦</span></div>
+    
+<div class="quotes-label">
+  <span class="label-heart">♡</span>
+  <span class="label-text">A FEW WORDS TO KEEP CLOSE</span>
+  <span class="label-sparkle">✦</span>
+</div>
+
+  </div>
+
+  <div class="quotes-list">
+
+    <blockquote class="quote-card">
+      <span class="quote-mark">“</span>
+      <span class="quote-decoration">✧</span>
+      <p>What you see is all there is.</p>
+      <div class="quote-divider"></div>
+      <cite>DANIEL KAHNEMAN</cite>
+      <small>THINKING, FAST AND SLOW</small>
+      <span class="quote-leaf leaf-one">❧</span>
+    </blockquote>
+
+    <blockquote class="quote-card">
+      <span class="quote-mark">“</span>
+      <span class="quote-decoration">✦</span>
+      <p>You are not special.</p>
+      <div class="quote-divider"></div>
+      <cite>DAVID ROBSON</cite>
+      <small>THE EXPECTATION EFFECT</small>
+      <span class="quote-leaf leaf-two">❧</span>
+    </blockquote>
+
+    <blockquote class="quote-card arabic-quote" dir="rtl">
+      <span class="quote-mark">”</span>
+      <span class="quote-decoration">✧</span>
+      <p>عش كل لحظة كأنها آخر لحظة في حياتك، عش بالإيمان، عش بالأمل، عش بالحب، عش بالكفاح، وقدّر قيمة الحياة.</p>
+      <div class="quote-divider"></div>
+      <cite>إبراهيم الفقي</cite>
+      <span class="quote-leaf leaf-three">❧</span>
+    </blockquote>
+
+    <blockquote class="quote-card">
+      <span class="quote-mark">“</span>
+      <span class="quote-decoration">✧</span>
+      <p>You think. The coherence comes mostly from the way your mind works.”</p>
+      <div class="quote-divider"></div>
+      <cite>DANIEL KAHNEMAN</cite>
+      <small>THINKING, FAST AND SLOW</small>
+      <span class="quote-leaf leaf-four">❧</span>
+    </blockquote>
+
+  </div>
+</div>
+
+<footer  class="signature-footer">
+  <span class="footer-sparkle">✦</span>
+  <p>Crafted with curiosity,</p>
+  <p class="footer-name">created by Maryam <span>♡</span></p>
+  <small>MY LEARNING JOURNEY </small>
+</footer>
+
+
+  <script src="js/script .js"></script>
+</body>
+</html>
